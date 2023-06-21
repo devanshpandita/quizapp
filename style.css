@@ -2,7 +2,8 @@ body {
   text-align: center;
   font-family: "poppins", sans-serif;
   background-image: url('wp8266596.webp');
-  background-size: cover;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 h1 {
   margin-top: 50px;
@@ -16,15 +17,25 @@ input, select, button {
   margin-top: 20px;
 }
 #quiz-container {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
 }
+
+#quiz-container p {
+  font-size: 20px;
+  color: #fff8de;
+}
+
 #name-input {
   border-color: transparent;
   text-align: center;
   border-radius: 5px;
   padding: 5px;
   padding-right: 20px;
-  margin-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
   background-color: #f8f8f3;
 }
 #category-select{
@@ -35,7 +46,8 @@ input, select, button {
   text-align: left;
   padding-left: 20px;
   padding-right: 20px;
-  margin-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: #f8f8f3;
 }
 #difficulty-select{
@@ -43,7 +55,8 @@ input, select, button {
   color: rgb(120, 118, 118);
   border-radius: 5px;
   padding: 5px;
-  margin-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
   text-align: left;
   padding-left: 20px;
   padding-right: 20px;
@@ -58,7 +71,7 @@ input, select, button {
   width: 150px; 
   height: 40px; 
   font-size: 20px; 
-  margin: 20px 703px 100px ; 
+  margin: 30px auto ; 
   transition: background-color 0.3s, color 0.3s;
   display: flex;
   justify-content: center;
@@ -66,12 +79,12 @@ input, select, button {
   text-align: center;
 }
 .sub:hover{
-  background-color: #218e37;
+  background-color: #a960e8;
   color: #f8f8f3;
 }
 
 .sub.clicked {
-  background-color: #218e37;
+  background-color: #a960e8;
   color: #f8f8f3;
 }
 
@@ -102,11 +115,11 @@ p{
 }
 
 .answer-button:hover{
-  background-color: #218e37;
+  background-color: #a960e8;
   color: #f8f8f3;
 }
 .answer-button.clicked {
-  background-color: #218e37;
+  background-color: #a960e8;
   color: #f8f8f3;
 }
 
@@ -127,12 +140,21 @@ p{
   text-align: center;
 }
 .try:hover{
-  background-color: #218e37;
+  background-color: #a960e8;
   color: #f8f8f3;
 }
 
 .try.clicked {
-  background-color: #218e37;
+  background-color: #a960e8;
+  color: #f8f8f3;
+}
+.answer-button.correct {
+  background-color: #21bf73;
   color: #f8f8f3;
 }
 
+.answer-button.incorrect {
+  background-color: #ff5555;
+  color: #f8f8f3;
+  border: 2px solid #ffd700;
+}

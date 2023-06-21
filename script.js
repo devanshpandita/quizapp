@@ -94,3 +94,32 @@ function shuffleArray(array) {
   }
   return shuffled;
 }
+
+function handleAnswer(e) {
+  const selectedAnswer = e.target.innerText;
+  const question = questions[currentQuestion];
+
+  const answerButtons = document.getElementsByClassName('answer-button');
+  for (const button of answerButtons) {
+    button.removeEventListener('click', handleAnswer);
+  }
+
+  const correctAnswer = question.correct_answer;
+  const answerElements = Array.from(answerButtons);
+  const selectedButton = answerElements.find(button => button.innerText === selectedAnswer);
+  const correctButton = answerElements.find(button => button.innerText === correctAnswer);
+
+  if (selectedAnswer === correctAnswer) {
+    selectedButton.classList.add('correct');
+    score++;
+  } else {
+    selectedButton.classList.add('incorrect');
+    correctButton.classList.add('correct');
+  }
+
+  setTimeout(() => {
+    currentQuestion++;
+    renderQuestion();
+  }, 2000);
+}
+ 
