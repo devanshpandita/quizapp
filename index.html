@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <link rel="stylesheet" href="style.css">
+
+  <title>Quiz App</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      margin-top: 50px;
+    }
+
+    input, select, button {
+      margin-top: 20px;
+    }
+
+    #quiz-container {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Quiz App!</h1>
+  <h2>Made by Devansh Pandita</h2>
+  <form id="start-form">
+    <input type="text" id="name-input" placeholder="Enter your name" required>
+    <select id="category-select" required>
+      <option value="">Select a category</option>
+      <option value="9">General Knowledge</option>
+      <option value="10">Books</option>
+      <option value="11">Film</option>
+      <option value="21">Sports</option>
+    </select>
+    <select id="difficulty-select" required>
+      <option value="">Select difficulty</option>
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <button type="submit" class="sub">Start Quiz</button>
+  </form>
+
+  <div id="quiz-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
